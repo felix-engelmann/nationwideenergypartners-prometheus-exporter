@@ -5,10 +5,10 @@ FROM ghcr.io/astral-sh/uv:alpine
 WORKDIR /app
 
 # Copy project dependency files
-COPY pyproject.toml uv.lock* ./
+COPY pyproject.toml ./
 
 # Install dependencies using uv
-RUN uv sync --locked
+RUN uv sync
 
 # Copy exporter code and .env file
 COPY exporter.py ./

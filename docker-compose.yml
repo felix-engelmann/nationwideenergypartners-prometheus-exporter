@@ -1,6 +1,6 @@
 services:
   nep-exporter:
-    image: :main      # the Docker image you built
+    image: ghcr.io/felix-engelmann/nationwideenergypartners-prometheus-exporter:main
     ports:
       - "8000:8000"                 # Prometheus will scrape this
     environment:

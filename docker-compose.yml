@@ -1,0 +1,12 @@
+services:
+  nep-exporter:
+    image: :main      # the Docker image you built
+    ports:
+      - "8000:8000"                 # Prometheus will scrape this
+    environment:
+      # login to https://mynationwideenergypartners.com/
+      USERNAME: "email"
+      PASSWORD: "login"
+    #env_file:
+    #  - .env                        # reads USERNAME and PASSWORD from .env
+    restart: unless-stopped

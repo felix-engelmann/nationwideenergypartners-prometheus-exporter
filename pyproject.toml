@@ -1,0 +1,12 @@
+[project]
+name = "nationwideenergypartners-prometheus-exporter"
+version = "0.1.0"
+description = "Prometheus exporter for NEP API"
+authors = ["Felix Engelmann <fe-github@nlogn.org>"]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "prometheus-client>=0.24.1",
+    "pycognito>=2024.5.1",
+    "requests>=2.32.5",
+]
